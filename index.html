@@ -1,0 +1,54 @@
+<div class="flex">
+    <div class="content">
+        <p>Первая строка: <span class="str-1"></span></p>
+        <p>Вторая строка: <span class="str-2"></span</p>
+        <p>Результат: <span class="rezult"></span></p>
+    </div>
+</div>
+
+<script>
+    let rezult = ""
+    let str_1 = prompt('Введите символы "+" или "-" для 1й строки')
+    let str_2 = prompt('Введите символы "+" или "-" для 2й строки')
+    document.querySelector(".str-1").innerText = str_1
+    document.querySelector(".str-2").innerText = str_2
+    array_1 = str_1.split("", 5)
+    array_2 = str_2.split("", 5)
+    console.log(array_1)
+    console.log(array_2)
+    for (let i = 0; i < array_1.length; i++) {
+        console.log(array_1[i])
+        console.log(array_2[i])
+        if ( array_1[i] != array_2[i]) {
+            rezult = rezult + "0"
+        }   else {
+            rezult = rezult + array_1[i]
+        }
+    }
+    document.querySelector(".rezult").innerText = rezult
+</script>
+
+<style>
+    body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    p {
+        font-size: 20px;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+    span {
+        font-weight: normal;
+    }
+</style>
